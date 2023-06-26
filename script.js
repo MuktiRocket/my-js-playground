@@ -480,24 +480,31 @@
 
 // console.log(count);
 
-class Fun {
-    constructor(name, lastName){
-        this.name = name
-        this.lastName = lastName
-    }
-    getName() {
-        return [this.name, this.lastName];    
+// class Fun {
+//     constructor(name, lastName){
+//         this.name = name
+//         this.lastName = lastName
+//     }
+//     getName() {
+//         return [this.name, this.lastName];    
+//     }
+// }
+
+// class SuperFun extends Fun {
+//     constructor(name,lastName){
+//         super(name,lastName)
+//     }
+// }
+// // const objParent = new Fun();
+// const obj = new SuperFun('jaydeep', 'sarkar');
+// console.log(obj.getName());
+
+class CustomError extends Error{
+    constructor(message, code){
+        super(message);
+        this.code = code
     }
 }
 
-class SuperFun extends Fun {
-    constructor(name,lastName){
-        super(name,lastName)
-    }
-    getNaam() {
-        return [this.name, this.lastName]
-    }
-}
-const objParent = new Fun();
-const obj = new SuperFun('jaydeep', 'sarkar');
-console.log(obj);
+const err = new CustomError('error invoked', 403);
+console.log(err);
