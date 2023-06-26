@@ -1,0 +1,136 @@
+github : MuktiRocket
+password: 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
+
+bitbucket: token
+password: TGTLBYbBmAAUwcyYdyrQ
+
+github account creds: jaydeeps96s@gmail.com
+password: Jaydeeps96@
+
+sql root: root
+password: Jaydeeps96@
+
+ms office personal creds: jaydeeps96s@gmail.com
+password: takemehigher@
+
+twilio login creds: jaydeeps96s@gmail.com
+password: TGTLBYbBmAAUwcyYdyrQ
+
+PNB account no.: PNB accountno.
+password: 0083010106405
+
+PNB debit card: PNB debitcard NO.
+password: 6080730083020414
+
+PNB mpin: PNB -Mpin
+password: 0789
+
+PNB custID
+password: U54501979
+
+BO id
+password: 1208160095531903
+
+
+
+
+
+
+
+
+
+
+
+write permmision in ubuntu:  sudo chmod -R 777 <dirname>
+
+			git problems: 
+1. error:
+	
+remote: Repository not found.
+fatal: repository 'https://github.com/user/pics-react-project.git/' not found
+	solution:
+	
+git remote remove origin
+git remote add origin https://[accesstoken]@github.com/username/reponame.git
+
+
+
+
+
+ 2. error:
+ 
+remote: Permission to MuktiRocket/pics-react-project.git denied to WinknDrinkApp.
+fatal: unable to access 'https://github.com/MuktiRocket/pics-react-project.git/': The requested URL returned error: 403
+	solution:
+	
+git remote set-url origin https://username@github.com/user/reponame.git
+ 
+ 
+You have been blocked by someone. Please read our policy, offensive behaviour is prohibited
+ 
+ 
+DB shrink log.ldf query (transact)
+USE SALESAPP;
+DBCC SHRINKFILE (SALESAPP_log, 1);
+
+backup codes nordpass: THVXBL54
+9X9HJTQY
+KB242Z8L
+H272F8NY
+267DWHVV
+UV7A2UVR
+W6LYQP8A
+CTJ8S4Y3
+PD9QK3AA
+GL38PZ2U
+
+'sqlsrv' => [
+            'driver' => 'sqlsrv',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST_SECOND', 'localhost'),
+            'port' => env('DB_PORT_SECOND', '1433'),
+            'database' => env('DB_DATABASE_SECOND', 'forge'),
+            'username' => env('DB_USERNAME_SECOND', 'forge'),
+            'password' => env('DB_PASSWORD_SECOND', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+        ],
+        
+'sqlsrv' => [
+            'driver' => 'sqlsrv',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST', 'localhost'),
+            'port' => env('DB_PORT', '1433'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+        ],                       
+
+
+'mysql' => [
+            'driver' => 'mysql',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'wink_drink_staging'), //wink_drink
+            'username' => env('DB_USERNAME', 'joeamu2677'),
+            'password' => env('DB_PASSWORD', 'pEn93My4uGz5uy1b'),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+        
+       https://staging.winkndrinks.com/api/v1/auto-delete
+       https://winkndrink-dev-1c62a-default-rtdb.firebaseio.com
+               winkndrink-dev-1c62a.firebaseio.com
