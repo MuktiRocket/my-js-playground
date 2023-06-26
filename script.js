@@ -499,12 +499,12 @@
 // const obj = new SuperFun('jaydeep', 'sarkar');
 // console.log(obj.getName());
 
-class CustomError extends Error{
-    constructor(message, code){
-        super(message);
-        this.code = code
-    }
-}
+// class CustomError extends Error{
+//     constructor(message, code){
+//         super(message);
+//         this.code = code
+//     }
+// }
 
-const err = new CustomError('error invoked', 403);
-console.log(err);
+// const err = new CustomError('error invoked', 403);
+// console.log(err);
