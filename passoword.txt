@@ -1,8 +1,4 @@
-github : MuktiRocket
-password: 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
-new password: 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
-new password: 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
-new password: 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
+
 
 bitbucket: token
 password: TGTLBYbBmAAUwcyYdyrQ
