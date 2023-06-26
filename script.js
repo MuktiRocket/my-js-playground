@@ -495,7 +495,7 @@
 //         super(name,lastName)
 //     }
 // }
-// // const objParent = new Fun();
+// const objParent = new Fun();
 // const obj = new SuperFun('jaydeep', 'sarkar');
 // console.log(obj.getName());
 
