@@ -508,3 +508,55 @@
 
 // const err = new CustomError('error invoked', 403);
 // console.log(err);
+
+//reverse of a Number
+// 1 way
+
+// const num = 12345;
+// const arr = num.toString().split('').map(Number);
+// length = arr.length;
+// let resArr = [];
+// for (let i = length-1; i >= 0; i--) {
+//     resArr.push(arr[i]);
+// }
+// const result = parseInt(resArr.join(''));
+// console.log(result);
+
+// 2 way
+// const num = 12345;
+// const res = num.toString().split('').reverse().join('');
+// console.log(parseInt(res));
+
+// armstrong Number check
+
+// const num = 37;
+// let numArray = num.toString().split('').map(Number);
+// length = numArray.length;
+// let result = 0;
+// let sumArray = []
+// for (let i = 0; i < numArray.length; i++) {
+//     sumArray.push(Math.pow(numArray[i],length));
+// }
+// let sum = sumArray.reduce((acc,sum) => {
+//     return acc + sum;
+// },0)
+// if(num === sum){
+//     console.log(`armstrong number = ${sum}`);
+// }else{
+//     console.log(`not a armstrong number = ${sum}`);
+// }
+
+// prime or not 
+ 
+// const checkPrime = (num) => {
+//     if(num === 1){
+//         return false;
+//     }
+//     for (let i = 2; i < num; i++) {
+//         if(num%i === 0){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// console.log(checkPrime(47));
