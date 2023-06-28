@@ -560,3 +560,16 @@
 //     return true;
 // }
 // console.log(checkPrime(47));
+
+//Fibonacci Series;
+// const fibonacciSeries = (limit) => {
+//     let series = [0,1];
+//     let sum = 0;
+//     for (let i = 2; i < limit; i++) {
+//         sum = series[i-1] + series[i-2];
+//         series.push(sum);
+//     }
+//     return series;
+// }
+
+// console.log(fibonacciSeries(10));
