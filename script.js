@@ -573,3 +573,31 @@
 // }
 
 // console.log(fibonacciSeries(10));
+
+//palindrome number
+
+// const palindromeCheck = (num) => {
+//     const reverse = parseInt(num.toString().split('').reverse().join(''));
+//     if(num === reverse){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+
+// console.log(palindromeCheck(123));
+
+// const palindromeCheck = (num) => {
+//     numArray = num.toString().split('');
+//     let reverse = [];
+//     for (let i = numArray.length - 1; i >= 0; i--) {
+//         reverse.push(numArray[i]);
+//     }
+//     reverse = parseInt(reverse.join(''));
+//     if(num === reverse){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+// console.log(palindromeCheck(121));
