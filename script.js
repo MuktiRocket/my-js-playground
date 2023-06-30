@@ -687,3 +687,11 @@
 // }else{
 //     console.log(false);
 // }
+// swap without 3 var
+// let a = 20;
+// let b = 10;
+// console.log(a,b);
+// a = a+b;
+// b = a-b;
+// a = a-b;
+// console.log(a,b);
