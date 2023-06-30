@@ -601,3 +601,89 @@
 //     }
 // }
 // console.log(palindromeCheck(121));
+
+//  find greatest among 3 integers 
+
+// const arr = [100,300,200]
+
+// const highestInteger = (arr) => {
+//     let val = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if(val<arr[i]){
+//             val = arr[i];
+//         }
+//     }  
+//     return val;  
+// }
+
+// console.log(highestInteger(arr));
+
+//using reduce
+
+// const arr = [100,300,200]
+// const highestInteger = (arr) => {
+//     const highest = arr.reduce((acc,num) => {
+//         return Math.max(acc,num);
+//     },0)
+
+//     return highest;
+// }
+// console.log(highestInteger(arr));
+
+// check if num is binary or not 
+
+// const checkBinary = (num) => {
+//     const regexOfBinary = /^[01]+$/;
+//     return regexOfBinary.test(num);
+// }
+// console.log(checkBinary("101010"));
+
+//sum of digits of a number using recursion
+
+// let res = 0;
+// const sum = (num) => {
+//     let lastDigit = Math.floor(num%10); //321
+//     let remaining = Math.floor(num/10); //12 1 0
+//     res += lastDigit; //3 5 6
+//     if(remaining === 0){
+//         return res;
+//     }
+//     let resp = sum(remaining);
+//     return resp  //12 1
+// }
+// console.log(sum(123));
+
+// const sum = (num) => {
+//     let res = 0;
+//     const length = num.toString().split('').length
+//     for (let i = 0; i <= length; i++) {
+//         lastDigit = Math.floor(num%10);
+//         remaining = Math.floor(num/10);
+//         num = remaining;
+//         res+=lastDigit;
+//     }
+//     return res
+// }
+// console.log(sum(123));
+
+//palindrome using recursion
+
+// let res= 0;
+// let targetNum = 121;
+
+// const palinRec = (num) => {
+//     lastDigit = Math.floor(num%10); //1 2
+//     remaining = Math.floor(num/10);  //12 1
+//     res = res*10 + lastDigit; //1 
+//     if(remaining === 0){
+//         return res;
+//     }
+//     let resp = palinRec(remaining); //12
+//     return resp;
+// }
+// const val = palinRec(targetNum);
+// if(targetNum === val){
+//    console.log(true);
+// }else{
+//     console.log(false);
+// }
