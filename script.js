@@ -356,7 +356,6 @@
 // const obj1 = Object.keys(obj).map((x) => x.toUpperCase());
 // console.log(obj1);
 
-
 // function name() {
 //     var x = 100;
 //     function name1() {
@@ -378,7 +377,7 @@
 //     }
 //     return uniqueArray;
 //   }
-  
+
 //   const arr = [1, 1, 2, 2, 2, 3, 3, 3];
 //   let uniqueArray = [];
 //   const result = removeDuplicates(arr);
@@ -457,7 +456,7 @@
 //     return
 //       [item];
 //   }
-  
+
 //   console.log(arrayFromValue(10));
 
 // let i;
@@ -469,10 +468,10 @@
 // }
 
 // const arr = [1,2,1,5,4,6,5];
-// const count = {}; 
+// const count = {};
 // for (let i = 0; i<arr.length; i++){
 //     if(count[arr[i]]){
-//         count[arr[i]]++ 
+//         count[arr[i]]++
 //     }else{
 //         count[arr[i]] = 1
 //     }
@@ -486,7 +485,7 @@
 //         this.lastName = lastName
 //     }
 //     getName() {
-//         return [this.name, this.lastName];    
+//         return [this.name, this.lastName];
 //     }
 // }
 
@@ -546,8 +545,8 @@
 //     console.log(`not a armstrong number = ${sum}`);
 // }
 
-// prime or not 
- 
+// prime or not
+
 // const checkPrime = (num) => {
 //     if(num === 1){
 //         return false;
@@ -602,7 +601,7 @@
 // }
 // console.log(palindromeCheck(121));
 
-//  find greatest among 3 integers 
+//  find greatest among 3 integers
 
 // const arr = [100,300,200]
 
@@ -612,8 +611,8 @@
 //         if(val<arr[i]){
 //             val = arr[i];
 //         }
-//     }  
-//     return val;  
+//     }
+//     return val;
 // }
 
 // console.log(highestInteger(arr));
@@ -630,7 +629,7 @@
 // }
 // console.log(highestInteger(arr));
 
-// check if num is binary or not 
+// check if num is binary or not
 
 // const checkBinary = (num) => {
 //     const regexOfBinary = /^[01]+$/;
@@ -674,7 +673,7 @@
 // const palinRec = (num) => {
 //     lastDigit = Math.floor(num%10); //1 2
 //     remaining = Math.floor(num/10);  //12 1
-//     res = res*10 + lastDigit; //1 
+//     res = res*10 + lastDigit; //1
 //     if(remaining === 0){
 //         return res;
 //     }
@@ -695,3 +694,186 @@
 // b = a-b;
 // a = a-b;
 // console.log(a,b);
+
+// const array = [1, 2, 1, 2, 1, 45, 6, 5, 4, 52, 45];
+// const res = {};
+// for (let i = 0; i < array.length; i++) {
+//     if (res[array[i]]) {
+//         res[array[i]] += 1
+//     } else {
+//         res[array[i]] = 1;
+//     }
+// }
+
+// const res = {};
+// for (let i = 0; i < array.length; i++) {
+//     if (res[array[i]]) {
+//         res[array[i]] += 1;
+//     } else {
+//         res[array[i]] = 1
+//     }
+// }
+// console.log(res);
+
+// const array = [1, 1, 1, 12, 2, 2, 3, 34, 5, 6];
+// const res = [];
+
+// for (let i = 0; i < array.length; i++) {
+//     if (res.indexOf(array[i]) == -1) {
+//         res.push(array[i]);
+//     }
+// }
+
+// for (let i = 0; i < array.length; i++) {
+//     if (res.indexOf(array[i]) == -1) {
+//         res.push(array[i]);
+//     }
+// }
+// console.log(res);
+
+// const arr = [1, 1, 1, , 5, 5, 56, 6, 7, 7, 7, 5, 9, 45];
+// const count = {};
+// for (let i = 0; i < arr.length; i++) {
+//     if (count[arr[i]]) {
+//         count[arr[i]] += 1
+//     } else {
+//         count[arr[i]] = 1
+//     }
+// }
+// console.log(count);
+
+// const arr = [1, 2, 6, 29, 24, 8, 7, 23];
+// const targetSum = 30;
+// let res = [];
+// let nonDup = [];
+
+// for (let i = 0; i < arr.length; i++) {
+//     let diff = targetSum - arr[i];
+//     if (arr.includes(diff)) {
+//         res.push(i, arr.indexOf(diff));
+//     }
+// }
+
+// for (let j = 0; j < res.length; j++) {
+//     if (nonDup.includes(res[j])) {
+//         continue;
+//     } else {
+//         nonDup.push(res[j])
+//     }
+// }
+// console.log(nonDup);
+
+// for (let i = 0; i < arr.length; i++) {
+//     let diff = targetSum - arr[i];
+//     if (arr.includes(diff)) {
+//         res.push(i, arr.indexOf(diff))
+//     }
+// }
+
+// for (let j = 0; j < res.length; j++) {
+//     if (nonDup.includes(res[j])) {
+//         continue;
+//     } else {
+//         nonDup.push(res[j]);
+//     }
+// }
+
+// console.log(nonDup);
+
+// const array = [1, 2, 3, 4, 5, 6];
+// const res = array.map((arr) => {
+//     return arr * 2;
+// })
+// console.log(res);
+
+// const array = [1, 2, 3, 4, 5, 6];
+// const res = array.filter((arr) => {
+//     return arr % 2 == 1;
+// })
+// console.log(res);
+
+// const array = [1, 2, 3, 4, 5, 6];
+// const res = array.reduce((acc, arr) => {
+//     return acc + arr;
+// }, 0);
+// console.log(res);
+
+// const arr = [1, 2, 3];
+// const res = arr.map((a) => a * 2);
+// console.log(res);
+// console.log(arr);
+
+// const res2 = arr.forEach((val, i, a) => a[i] = val * 2)
+// console.log(res2);
+
+// const obj = {
+//     name: 'jaydeep',
+//     age: '27',
+//     getDet() {
+//         console.log(`My name is ${this.name} and age is ${this.age}`);
+//     }
+// }
+// obj.getDet()
+
+// const array = [1, 2, 3];
+// const res = array.forEach((val, i, a) => {
+//     a[i] = val * 2
+// });
+
+// console.log(res, array);
+
+// const array = [1, 2, 2, 3, 4, 5, 7, 6, 6, 2, 1];
+// const unique = [];
+// for (let i = 0; i < array.length; i++) {
+//   if (unique.includes(array[i])) {
+//     continue;
+//   } else {
+//     unique.push(array[i]);
+//   }
+// }
+// console.log(unique);
+
+// const array = [1, 2, 5, 25, 29, 4, 36, 26];
+// const targetSum = 30;
+// const indexes = [];
+// for (let i = 0; i < array.length; i++) {
+//   const diff = targetSum - array[i];
+//   if (array.includes(diff)) {
+//     indexes.push(i, array.indexOf(diff));
+//   }
+// }
+// const unique = new Set(indexes);
+// const newArr = Array.from(unique);
+// console.log(newArr);
+
+// const array = [1, 1, 1, 1, 2, 2, 5, 5, 22, 2, 3, 3, 4, 4, 8, 98, 9, 10];
+// const count = {};
+
+// for (let i = 0; i < array.length; i++) {
+//   if (count[array[i]]) {
+//     count[array[i]] += 1;
+//   } else {
+//     count[array[i]] = 1;
+//   }
+// }
+// console.log(count);
+
+// const array = [1, 2, 3, 4, 5];
+
+// const res = array.map(function (arr) {
+//   return arr * 2;
+// });
+// console.log(res);
+
+// const res2 = array.forEach((val, i, arr) => (arr[i] = val * 2));
+// console.log(res2, array);
+
+// const res = array.filter(function (arr) {
+//   return arr % 2 == 0;
+// });
+// console.log(res);
+
+// const res = array.reduce(function (acc, arr) {
+//   return acc + arr;
+// }, 0);
+// console.log(res);
