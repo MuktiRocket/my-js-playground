@@ -877,3 +877,269 @@
 //   return acc + arr;
 // }, 0);
 // console.log(res);
+
+// Write a function that takes an array of numbers as input and returns a
+// Promise that resolves to an array containing the same numbers, sorted in ascending order.1, 5, 12, 23, 34, 45, 56, 67]
+const inputArray = [23, 45, 12, 56, 34, 67, 1, 5];
+const getAscArray = (arr) => {
+  return new Promise((resolve, reject) => {
+    if (!Array.isArray(arr)) {
+      reject("Invalid Input!");
+    }
+    const result = arr.sort((a, b) => a - b);
+    resolve(result);
+  });
+};
+
+// getAscArray(inputArray)
+//   .then((array) => {
+//     console.log(array);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+//Write a function that takes a string as input and returns a Promise that resolves to an object
+//containing the number of occurrences of each word in the string.
+
+const input = "hello world world world hello my my world world hello world";
+
+const getOccurance = (str) => {
+  return new Promise((resolve, reject) => {
+    if (typeof str !== "string") {
+      reject("Invalid string");
+    }
+    const obj = {};
+    const arr = str.split(" ");
+    for (let i = 0; i < arr.length; i++) {
+      if (obj[arr[i]]) {
+        obj[arr[i]] += 1;
+      } else {
+        obj[arr[i]] = 1;
+      }
+    }
+    resolve(obj);
+  });
+};
+
+// getOccurance(input)
+//   .then((results) => {
+//     console.log(results);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+//Capitalize the first letter of each word in a string without using any js functions like charAt() or slice()
+
+const inputstr = "my name is jaydeep sarkar";
+const capitalize = (str) => {
+  let result = "";
+  let isCap = true;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === " ") {
+      isCap = true;
+    } else {
+      if (isCap) {
+        result += str[i].toUpperCase();
+        isCap = false;
+      } else {
+        result += str[i];
+      }
+    }
+  }
+  return result;
+};
+
+// console.log(capitalize(inputstr));
+
+// Create a for loop that iterates up to 100 while outputting "Ram" at multiples of 3, "Sam" at multiples of 5 and
+//"Raj" at multiples of 3 and 5.
+
+// str = "";
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     str += "RamSam" + " ";
+//   } else if (i % 3 === 0) {
+//     str += "Ram" + " ";
+//   } else if (i % 5 === 0) {
+//     str += "Sam" + " ";
+//   } else {
+//     str += i.toString() + " ";
+//   }
+// }
+// console.log(str);
+
+// there is an array of the object that contains “salary”. Now you want to get the array of an
+// employee whose salary is greater than 40000.
+let employees = [
+  {
+    id: 11,
+    name: "Abhinav",
+    salary: 75000,
+  },
+  {
+    id: 2131,
+    name: "Gaurav",
+    salary: 62000,
+  },
+  {
+    id: 3012,
+    name: "Raj",
+    salary: 32000,
+  },
+];
+
+// const result = employees.filter((employee) => employee.salary > 40000);
+// console.log(result);
+
+const inputstr1 = "my name is jaydeep sarkar";
+const capitalize1 = (str) => {
+  const result = [];
+  const strArr = str.split(" ");
+  for (let i = 0; i < strArr.length; i++) {
+    result.push(strArr[i].charAt(0).toUpperCase() + strArr[i].slice(1));
+  }
+  return result.join(" ");
+};
+
+// console.log(capitalize1(inputstr1));
+
+// Create a sleep() function in javascript which takes a parameter delay (milliseconds).
+// Sleep function returns a new promise that resolves after the provided delayed time.
+// Example: sleep(2000).then(() => console.log(‘Ran after 2 sec’))
+
+const sleep = (milli) => {
+  return new Promise((resolve, reject) => {
+    if (typeof milli !== "number") {
+      reject("Invalid");
+    }
+    setTimeout(() => {
+      resolve("Ran after 2 sec");
+    }, 2000);
+  });
+};
+
+// sleep(2000)
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+/**Implement a createCounter() function, which returns another function as a result.
+Executing the resulting function would return an incremented counter number.
+Example:
+const counter = createCounter();
+console.log(counter()) // prints 1
+console.log(counter()) // prints 2
+console.log(counter()) // prints 3 */
+
+function createCounter() {
+  let count = 0;
+  return () => {
+    count++;
+    return count;
+  };
+}
+
+// const counter = createCounter();
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// for (let i = 0; i <= 5; i++) {
+//   setTimeout(() => {
+//     console.log(i);
+//   }, 1000);
+// }
+
+// function userGreeting(loggedInUser) {
+//   console.log(`${loggedInUser}`);
+// }
+// setTimeout(() => {
+//   userGreeting("John");
+// }, 2000);
+
+/*
+Create a validatePassword() function which takes a password string as input and
+will return an object with property of isValid and errors
+Validation Rules:
+1. Password must not be empty
+2. Password must have atleast 5 characters
+3. Password must start with number 1
+{ isValid: false, errors: [“Password length is less than 5 characters”] 
+{ isValid: false, errors: [“Password length is less than 5 chars”, “Password must start with
+number 1”] }
+{ isValid: true, errors: [] }
+*/
+
+const validatePassword = (pass) => {
+  const errors = [];
+  let isValid = true;
+  let str = "";
+  if (pass.length === 0) {
+    isValid = false;
+    errors.push("pass must not be empty");
+  }
+  if (pass[0] !== "1") {
+    isValid = false;
+    errors.push("pass must start with 1");
+  }
+  if (pass.length !== 5) {
+    isValid = false;
+    errors.push("pass must be 5 characters");
+  }
+  if (pass.length === 5 && pass[0] === "1") {
+    isValid = true;
+    errors;
+  }
+  return {
+    isValid,
+    errors,
+  };
+};
+
+// console.log(validatePassword(""));
+// console.log(validatePassword("0123"));
+// console.log(validatePassword("123a5"));
+
+/**
+ * Given two strings s and t, return true if t is an anagram of s, and false otherwise. An
+Anagram is a word or phrase formed by rearranging the letters of a different word or phrase,
+typically using all the original letters exactly once
+ * 
+ */
+const s = "Listen";
+const t = "Silent";
+const checkAnagram = (s, t) => {
+  let s1 = s.toLowerCase().split("").sort().join("");
+  let t1 = t.toLowerCase().split("").sort().join("");
+  if (s1 === t1) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+// console.log(checkAnagram(s, t));
+
+
+//insert and element in any position without using any function
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const insertElement = (arr, pos, ele) => {
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (i >= pos) {
+      arr[i + 1] = arr[i];
+      if (i === pos) {
+        arr[i] = ele;
+      }
+    }
+  }
+  return arr;
+};
+
+// console.log(insertElement(arr, 0, 100));
